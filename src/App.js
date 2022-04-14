@@ -118,13 +118,11 @@ function Main(props) {
   }, [notGuessedInProp]);
 
   useEffect(() => {
-    console.log(props.letterGuessed);
     if (!WORD_TO_GUESS.includes(props.letterGuessed.toLowerCase())) {
       setNotGuessedInProp(!notGuessedInProp);
     }
   }, [props.letterGuessed]);
 
-  console.log(notGuessedInProp);
   return (
     <div className="main">
       <div className="results">
